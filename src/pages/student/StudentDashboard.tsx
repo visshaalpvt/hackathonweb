@@ -118,7 +118,7 @@ export default function StudentDashboard() {
                             <div className="flex justify-center p-8"><Loader2 className="w-6 h-6 animate-spin text-blue-600" /></div>
                         ) : (
                             <div className="space-y-4">
-                                {announcements.map((ann, i) => (
+                                {announcements.map((ann) => (
                                     <div key={ann.id} className="flex gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-colors group">
                                         <div className="bg-white shadow-sm border border-slate-100 rounded-xl p-3 h-fit">
                                             <Bell className="w-4 h-4 text-slate-400 group-hover:text-blue-500 transition-colors" />
@@ -151,7 +151,7 @@ export default function StudentDashboard() {
                             <div className="flex justify-center p-8"><Loader2 className="w-6 h-6 animate-spin text-blue-600" /></div>
                         ) : (
                             <div className="space-y-3">
-                                {events.map((event, i) => {
+                                {events.map((event) => {
                                     const date = new Date(event.date);
                                     const month = date.toLocaleString('default', { month: 'short' });
                                     const day = date.getDate();
